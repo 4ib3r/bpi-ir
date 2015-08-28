@@ -1,0 +1,24 @@
+{
+  "name": "bpi-ir",
+  "version": "1.0.0",
+  "description": "Banana pi ir receiver event",
+  "main": "ir.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4ib3r/bpi-ir.git"
+  },
+  "keywords": [
+    "bananapi",
+    "banana",
+    "ir"
+  ],
+  "author": "Adrian Sławiński",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/4ib3r/bpi-ir/issues"
+  },
+  "homepage": "https://github.com/4ib3r/bpi-ir#readme"
+}
