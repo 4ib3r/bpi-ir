@@ -12,10 +12,11 @@
   },
   "keywords": [
     "bananapi",
+    "banana pi",
     "banana",
     "ir"
   ],
-  "author": "Adrian Sławiński",
+  "author": "Adrian Sławiński <adrian.slawinski@javadevelopers.pl>",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/4ib3r/bpi-ir/issues"

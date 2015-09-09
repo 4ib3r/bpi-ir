@@ -10,9 +10,14 @@ function IR() {
     
     var that = this;
     
-    this.start = function() {
-      this.stream = fs.createReadStream('/dev/input/event0');
-      this.stream.on('data', this.parseEvents);
+    /** start receiving events */
+    this.start = function(device) {
+      var dev = '/dev/input/event0';
+      if (device !== undefined) {
+          dev = device;
+      }
+      this.stream = fs.createReadStream(dev);
+      this.stream.on('data', parseEvents);
     }
     
     this.on = function(event, callback) {
@@ -20,16 +25,17 @@ function IR() {
     }
     
     this.stop = function() {
-        this.stream.close();
+        if (this.stream.close)
+            this.stream.close();
     }
         
-    this.parseEvents = function(buf) {
+    var parseEvents = function(buf) {
         var event = {
             tssec:   buf.readUInt32LE(0),
             tsusec:  buf.readUInt32LE(4),
             type:    buf.readUInt16LE(8),
-            key:    buf.readUInt16LE(10),
-            isDown:   buf.readUInt32LE(12)==1
+            key:     buf.readUInt16LE(10),
+            isDown:  buf.readUInt32LE(12)==1
         };
         that.events.key(event);
         if (event.isDown) {
