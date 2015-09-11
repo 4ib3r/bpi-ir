@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Banana pi ir receiver event",
   "main": "ir.js",
-  "scripts": {
-    "test": "test.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/4ib3r/bpi-ir.git"
