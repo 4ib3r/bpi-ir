@@ -31,7 +31,7 @@ key event return event object:
 var ir = new IR();
 ir.start();
 ir.on('up', function(key) {
-  console.log.key();	
+  console.log(key);	
 });
 //at end of program
 ir.stop();
