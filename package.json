@@ -1,6 +1,6 @@
 {
   "name": "bpi-ir",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Banana pi ir receiver event",
   "main": "ir.js",
   "repository": {
